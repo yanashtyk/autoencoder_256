@@ -30,9 +30,9 @@ model = autoencoder_256()
 
 optimizer = torch.optim.Adam(model.parameters(), lr=1e-3, weight_decay=1e-5)
 criterion = nn.MSELoss()
-num_epochs=1
+num_epochs=10
 
-model.load_state_dict(torch.load('./aut_256_10.pth'))
+model.load_state_dict(torch.load('./aut_256_20.pth'))
 print('load')
 for epoch in range(num_epochs):
     for data in train_loader:
